@@ -24,11 +24,11 @@ public class Usuario {
     @Column(nullable = false)
     private String senha;
 
-    @ManyToMany
+    @ManyToOne
     @JoinTable(name = "usuario_grupo",
             joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "grupo_id"))
-    private List<Grupo> grupos;
+    private Grupo grupos;
 
     @Column(nullable = false)
     private LocalDateTime dataCadastro;

@@ -10,11 +10,11 @@ import java.util.List;
 @Getter
 @Setter
 public class UsuarioDto {
-    private Long id;
     private String nome;
     private String email;
     private String senha;
-    private List<Grupo> grupos;
+    private Grupo grupos;
     private LocalDateTime dataCadastro;
+    private Integer tipoCliente;
 
 }
