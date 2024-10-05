@@ -19,7 +19,6 @@ public class UsuarioConverter {
         Grupo grupo = new Grupo();
         List<Permissao> permissaos = new ArrayList<>();
         Permissao permissao = new Permissao();
-        permissao.se
         permissaos.add(permissao);
 
         grupo.setNome(tipoCliente.getDescricao());
