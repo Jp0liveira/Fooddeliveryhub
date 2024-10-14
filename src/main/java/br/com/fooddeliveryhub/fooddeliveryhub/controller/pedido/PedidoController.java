@@ -6,7 +6,10 @@ import br.com.fooddeliveryhub.fooddeliveryhub.model.Usuario;
 import br.com.fooddeliveryhub.fooddeliveryhub.service.pedido.PedidoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.file.AccessDeniedException;
 
@@ -20,7 +23,7 @@ public class PedidoController {
         this.pedidoService = pedidoService;
     }
 
-    @PostMapping
+    @PostMapping("/realizarPedido")
     public ResponseEntity<String> realizarPedido(@RequestBody PedidoDto pedidoDto) {
         try {
             Usuario usuario = pedidoService.obterUsuario(pedidoDto.getClienteId());

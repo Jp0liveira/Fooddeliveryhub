@@ -52,3 +52,8 @@ INSERT INTO grupo_permissao (grupo_id, permissao_id) VALUES (5, 13); -- GERENCIA
 INSERT INTO grupo_permissao (grupo_id, permissao_id) VALUES (5, 14); -- GERENCIAR_PROMOCOES
 INSERT INTO grupo_permissao (grupo_id, permissao_id) VALUES (5, 15); -- ACESSO_RELATORIOS_GLOBAIS
 
+-- Inserindo formas de pagamento no banco de dados
+INSERT INTO forma_pagamento (id, descricao) VALUES (1, 'Pix');
+INSERT INTO forma_pagamento (id, descricao) VALUES (2, 'Cartão');
+INSERT INTO forma_pagamento (id, descricao) VALUES (3, 'Boleto');
+

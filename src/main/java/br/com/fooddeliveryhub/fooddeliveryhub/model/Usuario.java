@@ -1,5 +1,6 @@
 package br.com.fooddeliveryhub.fooddeliveryhub.model;
 
+import br.com.fooddeliveryhub.fooddeliveryhub.common.Pessoa;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,16 +10,10 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-public class Usuario {
+public class Usuario extends Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
-    private String nome;
-
-    @Column(nullable = false)
-    private String email;
 
     @Column(nullable = false)
     private String senha;
