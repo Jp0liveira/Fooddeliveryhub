@@ -1,6 +1,7 @@
 package br.com.fooddeliveryhub.fooddeliveryhub.controller.pedido;
 
 
+import br.com.fooddeliveryhub.fooddeliveryhub.common.PedidoSwagger;
 import br.com.fooddeliveryhub.fooddeliveryhub.dto.pedido.PedidoDto;
 import br.com.fooddeliveryhub.fooddeliveryhub.model.Usuario;
 import br.com.fooddeliveryhub.fooddeliveryhub.service.pedido.PedidoService;
@@ -15,7 +16,7 @@ import java.nio.file.AccessDeniedException;
 
 @RestController
 @RequestMapping("/pedido")
-public class PedidoController {
+public class PedidoController implements PedidoSwagger {
 
     private final PedidoService pedidoService;
 
@@ -23,6 +24,7 @@ public class PedidoController {
         this.pedidoService = pedidoService;
     }
 
+    @Override
     @PostMapping("/realizarPedido")
     public ResponseEntity<String> realizarPedido(@RequestBody PedidoDto pedidoDto) {
         try {
