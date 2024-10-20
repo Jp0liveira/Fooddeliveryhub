@@ -52,4 +52,11 @@ public class Restaurante {
 
     private LocalDateTime dataCadastro;
     private LocalDateTime dataAtualizacao;
+    
+    // Atributos de latitude e longitude para cálculo de distância
+    @Column(nullable = false)
+    private Double latitude;
+
+    @Column(nullable = false)
+    private Double longitude;
 }

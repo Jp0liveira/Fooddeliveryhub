@@ -18,5 +18,12 @@ public class Cidade {
     @ManyToOne
     @JoinColumn(name = "estado_id", nullable = false)
     private Estado estado;
+
+    // Novos atributos para latitude e longitude 
+    @Column(nullable = false)
+    private Double latitude;
+
+    @Column(nullable = false)
+    private Double longitude;
 }
 
